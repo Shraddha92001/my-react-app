@@ -25,6 +25,12 @@ export default function TextForm(props) {
         setText(newtext);
     }
 
+    const Copytext = ()=>{
+        let newtext = document.getElementById("mybox");
+        newtext.select();
+        navigator.clipboard.writeText(newtext.value);
+    }
+
     // const handleDownload = ()=>{
     //     console.log("hello");
     //     // window.location.href = '/path/to/your/file';
@@ -42,6 +48,7 @@ export default function TextForm(props) {
             <button className='btn btn-primary  mx-1' onClick={handleLCclick} > Convert to lower case</button>
             <button type="button" className='btn btn-danger mx-1' onClick={cleartext} >Clear</button>
             {/* <button type=" button" className='btn btn-info mx-1' onClick={handleDownload}>Download File</button> */}
+            <button type="button" className='btn btn-secondary mx-1' onClick={Copytext} >Copy Text</button>
         </div>
         <div className="container" my-3>
             <h1>Your Summery</h1>
