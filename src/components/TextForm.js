@@ -24,6 +24,11 @@ export default function TextForm(props) {
         let newtext = '';
         setText(newtext);
     }
+
+    // const handleDownload = ()=>{
+    //     console.log("hello");
+    //     // window.location.href = '/path/to/your/file';
+    // }
     const [text, setText] = useState("");
     return (
         <>
@@ -33,10 +38,10 @@ export default function TextForm(props) {
                 <textarea className='form-control' onChange={handleOnChange} value ={text} id="mybox" rows="8"></textarea>
             </div>
 
-            <button type="button" class="btn btn-success mx-1" onClick={handleUPClick}> Convert to UpperCase</button> 
-            <button className='btn btn-primary  mx-1' onClick={handleLCclick} > Convert to LowerCase</button>
+            <button type="button" class="btn btn-success mx-1" onClick={handleUPClick}> Convert to UPPER CASE</button> 
+            <button className='btn btn-primary  mx-1' onClick={handleLCclick} > Convert to lower case</button>
             <button type="button" className='btn btn-danger mx-1' onClick={cleartext} >Clear</button>
-        
+            {/* <button type=" button" className='btn btn-info mx-1' onClick={handleDownload}>Download File</button> */}
         </div>
         <div className="container" my-3>
             <h1>Your Summery</h1>
